@@ -1,0 +1,24 @@
+{% extends "masterPage.html" %}
+
+{% block a %}
+
+<h1>{{ question.title }}</h1>
+<p>{{ question.content }}</p>
+<p>Posted by: {{ question.user.username }} | {{ question.created_at }}</p>
+
+<h2>Answers</h2>
+<ul>
+    {% for answer in answers %}
+    <li>{{ answer.content }}</li>
+    <p>Posted by: {{ answer.user.username }} | {{ answer.created_at }}</p>
+    {% empty %}
+    <li>No answers available.</li>
+    {% endfor %}
+</ul>
+
+
+
+
+<a href="{% url 'dicussion' %}">Back to Questions</a>
+
+{% endblock a %}

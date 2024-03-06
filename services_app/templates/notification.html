@@ -1,0 +1,20 @@
+{% extends "masterPage.html" %}
+
+
+{% block a %}
+
+<ul>
+{% for m in msgs %}
+
+<li>{{m.message}}</li>
+
+{% empty %}
+<h4> No Messages </h4>
+
+{% endfor %}
+
+
+</ul>
+
+
+{% endblock a %}

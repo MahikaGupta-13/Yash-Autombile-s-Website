@@ -1,0 +1,18 @@
+{% extends "masterPage.html" %}
+{% block a %}
+<div class="container text-center">
+{% for v in vecs   %}
+
+
+    <h2>Customer Name: {{request.user}}</h2>
+    <h2>Vehicle Name: {{v.bikeName}}</h2>
+    <h2>Vehicle Number: {{v.model_no}}</h2>
+   <h2> Problem: {{v.problem}}</h2>
+    <h2>Time: {{v.time}}</h2>
+    <div class="container text-center">
+        <button class="btn btn-primary" onclick="window.print()">Print</button>
+        </div>
+
+{% endfor %}
+</div>
+{% endblock a %}

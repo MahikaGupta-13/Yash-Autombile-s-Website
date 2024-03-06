@@ -1,0 +1,36 @@
+{% extends "masterPage.html" %}
+
+{% block a %}
+
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <td>Sr.NO</td>
+            <td>username</td>
+            <td>Vechilce Name</td>
+            <td> Time</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+
+    <tr>
+        
+        {% for v in vecs %}
+        <td>{{forloop.counter}}</td>
+        <td>{{request.user}}</td>
+        <td>{{v.bikeName }}</td>
+        <td>{{v.time }}</td>
+        <td> <a class="btn btn-primary" href="{% url "showDetails" v.id %}">Get Detials</a></td>
+       </tr>
+        {% endfor %}
+    
+    
+</table>
+
+
+
+
+
+{% endblock  %}
