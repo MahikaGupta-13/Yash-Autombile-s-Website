@@ -1,0 +1,25 @@
+{% extends "masterPage.html" %}
+
+
+{% block a %}
+
+<h2 class="text-center">Welcome to Contact us Page</h2>
+<div class="container mt-5 ">
+    <form class="col-6 mx-auto card shadow-lg px-5" method="post">
+      {% csrf_token %}
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Description</label>
+          <textarea class="form-control" name="desc" id="exampleInputPassword1"></textarea>
+
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+</div>
+{% endblock a %}

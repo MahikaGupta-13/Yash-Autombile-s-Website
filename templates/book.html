@@ -1,0 +1,20 @@
+{% extends "masterPage.html" %}
+{% block a %}
+
+{% for v in vecs %}
+
+<div class="container">
+    <img src="/media/{{v.img1}}" alt="">
+    <div class="container">
+        <h3>Customer Name: {{request.user}}</h3>
+        <h2>Vechile Name: {{v.name}}</h2>
+        <h2>Vechile Price: {{v.price}}</h2>
+    </div>
+</div>
+
+<div class="container text-center">
+<button class="btn btn-primary" onclick="window.print()">Print</button>
+</div>
+{% endfor %}
+
+{% endblock a %}

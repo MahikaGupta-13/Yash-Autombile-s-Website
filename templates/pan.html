@@ -1,0 +1,102 @@
+{% extends "masterPage.html" %}
+
+
+{% block extcss %}
+<style>
+  body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+
+  swiper-container {
+    width: 300px;
+    height: 300px;
+    /* position: absolute; */
+    /* left: 50%;
+      top: 50%;
+      margin-left: -150px;
+      margin-top: -150px; */
+  }
+
+  swiper-slide {
+    /* background-position: center; */
+    background-size: cover;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+</style>
+
+{% endblock extcss %}
+{% block a %}
+
+<div class="container text-start">
+
+  {% for v in vecs %}
+
+  <div class="container d-flex">
+
+    <swiper-container class="mySwiper" pagination="true" effect="cube" grab-cursor="true" cube-effect-shadow="true"
+      cube-effect-slide-shadows="true" cube-effect-shadow-offset="20" cube-effect-shadow-scale="0.94"
+      style="margin: 50px; width: 50%;">
+
+      <swiper-slide>
+        <img src="/media/{{v.img1}}">
+      </swiper-slide>
+
+      <swiper-slide>
+        <img src="/media/{{v.img2}}">
+      </swiper-slide>
+
+      <swiper-slide>
+        <img src="/media/{{v.img3}}">
+      </swiper-slide>
+
+      <swiper-slide>
+        <img src="/media/{{v.img4}}">
+      </swiper-slide>
+    </swiper-container>
+
+    <div class="container mt-3 py-5">
+      <h2>{{v.name}}</h2>
+      <h5>{{v.price}}</h5>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Read More
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+<h4>{{v.description}}</h4>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+      <a href="{% url "bookVec" v.id %}" class="btn btn-primary">Book</a>
+      </div>
+
+
+  </div>
+  {% endfor %}
+
+  
+  {% comment %} <h2>{{det[0].name}}</h2>
+  <h5>{{det[0].price}}</h5> {% endcomment %}
+  {% comment %} {% endfor %} {% endcomment %}
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+
+  {% endblock a %}

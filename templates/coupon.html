@@ -1,0 +1,24 @@
+{% extends "masterPage.html" %}
+{% block a %}
+
+<div class="container">
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            
+            <h1 class="display-4 text-uppercase text-center mb-5">CHOOSE YOUR BRAND</h1>
+            <div class="row">
+   {% for b in brands %}
+   <div class="col-lg-4 col-md-6 mb-2">
+    <div class="rent-item mb-4">
+        
+        <h4 class="text-uppercase mb-4"> <a href="{% url "vecviewurl" b.id %}">{{b.brand}} </a></h4>
+        
+        
+    </div>
+</div>
+   
+ 
+   {% endfor %}
+</div>
+
+{% endblock a %}
