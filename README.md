@@ -1,5 +1,24 @@
-Yash Automobiles | Django, Bootstrap, SQLite
-Yash Automobiles is a web-based showroom and service management system developed using Django, featuring role-based logins for Admin, Staff, and Customer. 
-Customers can browse multi-brand vehicles with images, book services, raise queries, and submit feedback. Admins manage users, bookings, and feedback, while staff track assigned services.
-The application uses SQLite for backend storage and Bootstrap for a responsive, user-friendly interface.
-Designed with modular architecture and a clean UI, the system ensures efficient operations and easy future upgrades across all user roles.
+Yash Automobiles
+Yash Automobiles is a web-based showroom and service management system designed to streamline multi-brand vehicle operations with role-based access for Admins, Staff, and Customers.
+It enables users to book services, browse vehicles, raise queries, and provide feedback while allowing the admin and staff to manage operations efficiently.
+
+🌟 Features
+Role-based logins: Admin, Staff, Customer
+Browse vehicle listings with brand filters and images
+Book vehicle services and raise queries
+Admin panel for managing staff, feedback, and bookings
+Responsive UI for seamless multi-device access
+
+📂 Modules
+Customer Panel: Explore vehicles, book services, and submit feedback
+Staff Panel: View and manage service bookings
+Admin Panel: Control system operations, manage staff and users
+
+🛠 Technologies Used
+Django
+Bootstrap
+SQLite
+
+📄 Documentation
+[View Full Project Documentation (PDF)](YashAutomobile_documentation.pdf)
+
